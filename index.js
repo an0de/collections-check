@@ -14,6 +14,7 @@ const sumUniqueNumbers = (arr) => {
   }
   return arr.filter((el, i) => arr.indexOf(el) === i).reduce((acc, el) => acc + el);
 };
+
 const mergeArrays = (...arrs) => {
   if (Array.isArray(arrs) === false) {
     return [];
@@ -21,8 +22,11 @@ const mergeArrays = (...arrs) => {
   const mergedArr = [].concat(...arrs);
   return mergedArr.filter((el, i) => mergedArr.indexOf(el) === i);
 };
+
 const hasProperty = (obj, propName) => Object.hasOwn(obj ?? {}, propName);
+
 const getPropertyValue = (obj, propName) => obj?.[propName];
+
 const invertObject = (obj) => {
   const invertedObj = {};
   for (const [key, value] of Object.entries(obj)) {
